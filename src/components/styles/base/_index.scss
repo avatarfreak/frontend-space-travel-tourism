@@ -1,0 +1,66 @@
+:root {
+  --clr-dark: hsl(230, 35%, 7%);
+  --clr-light: hsl(231, 77%, 90%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --fs-900: 16px;
+  --fs-800: 80px;
+  --fs-700: 56px;
+  --fs-600: 28px;
+  --fs-500: 24px;
+  --fs-550: 16px;
+  --fs-400: 15px;
+  --fs-300: 20px;
+  --fs-200: 14px;
+  --fs-100: 14px;
+
+  --ff-serif: "Bellefair", serif;
+  --ff-sans: "Barlow", sans-serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-900: 20px;
+    --fs-800: 150px;
+    --fs-700: 80px;
+    --fs-600: 28px;
+    --fs-500: 40px;
+    --fs-550: 24px;
+
+    --fs-400: 16px;
+    --fs-300: 32px;
+    --fs-200: 16px;
+    --fs-100: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-900: 28px;
+    --fs-800: 150px;
+    --fs-700: 100px;
+    --fs-600: 28px;
+    --fs-500: 56px;
+    --fs-550: 32px;
+
+    --fs-400: 18px;
+    --fs-300: 32px;
+    --fs-200: 16px;
+    --fs-100: 14px;
+  }
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--ff-sans-normal);
+  color: hsl(var(--clr-light));
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  margin: 0 auto;
+  min-height: 100vh;
+}
