@@ -15,6 +15,11 @@
     opacity: 0;
     transform: scale(0);
     transition: opacity 500ms linear, transform 750ms ease-in-out;
+
+    @include mq(48rem) {
+      width: 242 * 2px;
+      height: 242 * 2px;
+    }
   }
 
   &:hover::after {
