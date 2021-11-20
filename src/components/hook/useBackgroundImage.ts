@@ -12,7 +12,7 @@ const useBackgroundImage = (bgImg: string) => {
          return document.body.classList.add('home')
       }
       else {
-         setImage(image);
+         setImage(bgImg);
          return document.body.classList.add(image)
       }
    }, [bgImg, image])
