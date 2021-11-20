@@ -12,3 +12,10 @@
   border: 0;
   @content;
 }
+
+/* Media Queries */
+@mixin mq($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
