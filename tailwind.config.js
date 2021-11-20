@@ -20,14 +20,40 @@ module.exports = {
          fontFamily: {
             "ff-serif": "var(--ff-serif)",
             "ff-sans-cond": "var(--ff-sans-cond)",
-            "ff-sans": "var(--ff-sans)"
+            "ff-sans": "var(--ff-sans)",
          },
          colors: {
             "clr-dark": "var(--clr-dark)",
-            "clr-light": "var(--clr-dark)",
+            "clr-light": "var(--clr-light)",
             "clr-white": "var(--clr-white)",
-         }
-      },
+         },
+         backgroundImage: {
+            "home-mobile": "url(/assets/home/background-home-mobile.jpg)",
+            "home-tablet": "url(/assets/home/background-home-tablet.jpg)",
+            "home-desktop": "url(/assets/home/background-home-desktop.jpg)",
+
+            "technology-mobile": "url(/assets/technology/background-technology-mobile.jpg)",
+            "technology-tablet": "url(/assets/technology/background-technology-tablet.jpg)",
+            "technology-desktop": "url(/assets/technology/background-technology-desktop.jpg)",
+
+            "destination-mobile": "url(/assets/destination/background-destination-mobile.jpg)",
+            "destination-tablet": "url(/assets/destination/background-destination-tablet.jpg)",
+            "destination-desktop": "url(/assets/destination/background-destination-desktop.jpg)",
+
+            "crew-mobile": "url(/assets/crew/background-crew-mobile.jpg)",
+            "crew-tablet": "url(/assets/crew/background-crew-tablet.jpg)",
+            "crew-desktop": "url(/assets/crew/background-crew-desktop.jpg)",
+
+            "menu-open": "url(/assets/shared/icon-hamburger.svg)",
+            "menu-close": "url(/assets/shared/icon-close.svg)",
+         },
+         gridTemplateRows: {
+            "base": "min-content 1fr",
+         },
+         margin: {
+            clamp: "clamp(100px, 20vw, 106px"
+         },
+      }
    },
    variants: {
       extend: {},
