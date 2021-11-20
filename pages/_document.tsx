@@ -7,7 +7,6 @@ class MyDocument extends Document {
       return initialProps;
    }
    render() {
-      const prefix = process.env.NEXT_PUBLIC_BASE_PATH;
       return (
          <Html lang="en">
             <Head>
