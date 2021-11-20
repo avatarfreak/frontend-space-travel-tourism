@@ -16,9 +16,16 @@
     transform: scale(0);
     transition: opacity 500ms linear, transform 750ms ease-in-out;
 
+    /* Tablet layout */
     @include mq(48rem) {
       width: 242 * 2px;
       height: 242 * 2px;
+    }
+
+    /* Desktop layout */
+    @include mq(64rem) {
+      width: 274 * 2px;
+      height: 274 * 2px;
     }
   }
 

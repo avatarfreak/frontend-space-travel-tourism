@@ -35,7 +35,7 @@ const Navigation = () => {
          {/*--- Logo --- */}
          <Link href="/">
             <a>
-               <img src="/assets/shared/logo.svg" className="mt-7" alt="logo" />
+               <img src="/assets/shared/logo.svg" className="mt-7 lg:min-h-[3rem] lg:min-w-[3rem] lg:mr-16 lg:mt-0" alt="logo" />
             </a>
          </Link>
 
@@ -56,27 +56,33 @@ const Navigation = () => {
             className={`
              fixed right-0 top-0 min-h-screen bg-white/10 backdrop-blur-xl w-3/4 transform transition duration-700 ease-in-out z-10
              ${!isOpen ? "translate-x-full" : "translate-x-0"}
-             md:translate-x-0
-             md:tracking-[2.36px]
-             md:text-sm
-             md:min-h-[6rem]
+             md:translate-x-0 md:tracking-[2.36px] md:text-sm md:min-h-[6rem]
+
+             lg:font-sans-cond
+             lg:translate-x-0
+             lg:relative
+             lg:text-base
+             lg:tracking-[2.7px]
+             lg:w-[830px]
+             lg:order-2
             `}>
 
             <ul
                className="mt-32 space-y-8 ml-8 text-clr-white
                md:m-0 md:space-y-0 md:flex md:justify-evenly md:items-center md:mt-9 md:px-8
+               lg:w-[830px]
                ">
                <li>
-                  <Link href="/"><a className="uppercase border-b-4 border-white pb-9 "><span aria-hidden="true" className="mr-3 font-bold md:hidden">00</span>Home</a></Link>
+                  <Link href="/"><a className="uppercase  md:border-b-4 md:border-white md:pb-9 "><span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">00</span>Home</a></Link>
                </li>
                <li>
-                  <Link href="/destination"><a className="uppercase  pb-9 hover:border-b-4 hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden">01</span>destination</a></Link>
+                  <Link href="/destination"><a className="uppercase  md:pb-9 md:hover:border-b-4 md:hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">01</span>destination</a></Link>
                </li>
                <li>
-                  <Link href="/crew"><a className="uppercase pb-9 hover:border-b-4 hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden">02</span>crew</a></Link>
+                  <Link href="/crew"><a className="uppercase md:pb-9 md:hover:border-b-4 md:hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">02</span>crew</a></Link>
                </li>
                <li>
-                  <Link href="/technology"><a className="uppercase pb-9  hover:border-b-4 hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden">03</span>technology</a></Link>
+                  <Link href="/technology"><a className="uppercase md:pb-9  md:hover:border-b-4 md:hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">03</span>technology</a></Link>
                </li>
             </ul>
          </nav>

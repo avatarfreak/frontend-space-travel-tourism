@@ -50,8 +50,12 @@ module.exports = {
          gridTemplateRows: {
             "base": "min-content 1fr",
          },
+         gridTemplateColumns: {
+            "lg-home": "minmax(2rem, 10.3rem) repeat(2, 1fr) minmax(2rem, 10.3rem)"
+         },
          margin: {
-            clamp: "clamp(100px, 20vw, 106px)"
+            "md-clamp": "clamp(6.25rem, 20vw, 6.625rem)",
+            "lg-clamp": "clamp(12.5rem, 20vw, 15.68rem)"
          },
          maxWidth: {
             'para': '50ch'
