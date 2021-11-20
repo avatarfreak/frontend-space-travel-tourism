@@ -44,7 +44,7 @@ const Navigation = () => {
             onClick={toggleMenu}
             aria-expanded={isActive}
             className={`
-            h-6 w-5 bg-no-repeat z-10
+            h-6 w-5 bg-no-repeat z-20
             ${isOpen ? "bg-menu-close" : "bg-menu-open"}
             `}>
             <span className="sr-only">menu</span>
@@ -57,6 +57,7 @@ const Navigation = () => {
             className={`
              fixed right-0 top-0 min-h-screen bg-white/10 backdrop-blur-xl w-3/4
              transform transition duration-700 ease-in-out
+             z-10
              ${!isOpen ? "translate-x-full" : "translate-x-0"}
             `}>
             <ul

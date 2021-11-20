@@ -18,9 +18,9 @@ module.exports = {
 
          },
          fontFamily: {
-            "ff-serif": "var(--ff-serif)",
-            "ff-sans-cond": "var(--ff-sans-cond)",
-            "ff-sans": "var(--ff-sans)",
+            "serif": "var(--ff-serif)",
+            "sans-cond": "var(--ff-sans-cond)",
+            "sans": "var(--ff-sans)",
          },
          colors: {
             "clr-dark": "var(--clr-dark)",
@@ -51,8 +51,12 @@ module.exports = {
             "base": "min-content 1fr",
          },
          margin: {
-            clamp: "clamp(100px, 20vw, 106px"
+            clamp: "clamp(100px, 20vw, 106px)"
          },
+         maxWidth: {
+            'para': '50ch'
+         }
+
       }
    },
    variants: {

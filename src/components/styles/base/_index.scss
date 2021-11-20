@@ -51,16 +51,14 @@
   }
 }
 
+:focus-visible {
+  outline: 2px dashed red;
+}
+
 body {
-  height: 100%;
-  width: 100%;
-  font-family: var(--ff-sans-normal);
-  color: hsl(var(--clr-light));
+  @apply h-full w-full font-sans text-clr-light bg-home-mobile bg-no-repeat bg-center bg-cover;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-rows: min-content 1fr;
-  margin: 0 auto;
-  min-height: 100vh;
+  @apply grid grid-rows-base min-h-screen mx-auto;
 }
