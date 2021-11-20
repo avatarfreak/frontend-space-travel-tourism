@@ -1,0 +1,12 @@
+@use "sass:math";
+$base: 16;
+
+@function to_rem($number) {
+  @if unitless($number) {
+    @return math.div($number, $base) * 1rem;
+  } @else {
+    @if type-of($number) == "number" and not unitless($number) {
+      @return math.div($number, $base) * 1rem;
+    }
+  }
+}

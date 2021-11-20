@@ -1,0 +1,14 @@
+@use "./func" as *;
+
+/* Rounded button  */
+@mixin btn-rounded($size, $color) {
+  width: to_rem($size);
+  height: to_rem($size);
+  border-radius: 50%;
+  background-color: #{$color};
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  @content;
+}
