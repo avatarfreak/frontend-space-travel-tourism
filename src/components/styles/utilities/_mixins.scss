@@ -12,6 +12,13 @@
   border: 0;
   @content;
 }
+/* background Image */
+@mixin backgroundImage($page, $device) {
+  background-image: url("/assets/#{$page}/background-#{$page}-#{$device}.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  @content;
+}
 
 /* Media Queries */
 @mixin mq($size) {
