@@ -58,9 +58,13 @@ module.exports = {
             "lg-clamp": "clamp(12.5rem, 20vw, 15.68rem)"
          },
          maxWidth: {
-            'para': '50ch'
+            'para': '50ch',
+            '1/4': '25%',
+            '2/5': '40%',
+            '1/2': '50%',
+            '3/5': '60%',
+            '3/4': '75%'
          }
-
       }
    },
    variants: {
