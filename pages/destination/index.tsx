@@ -5,23 +5,25 @@ import React from 'react'
 const Destination = () => {
    useBackgroundImage('destination');
    return (
-      <main className="text-center grid w-full mx-auto justify-items-center" >
+      <main className="text-center grid w-full space-y-8 mx-auto justify-items-center md:mt-md-clamp " >
 
          {/*-- heading --*/}
-         <h1 className="uppercase font-sans-cond text-clr-white text-fs-900 tracking-[2.7px] " >
+         <h1 className="uppercase font-sans-cond text-clr-white text-fs-900 tracking-[2.7px]
+         md:justify-self-start md:pl-8
+         " >
             <span className="font-bold text-white/50">01 </span>
             Pick your destination
          </h1 >
 
          {/*-- picture --*/}
-         <picture className="max-w-1/2">
+         <picture className="max-w-1/2 md:max-w-2/5">
             <source srcSet="/assets/destination/image-moon.webp" type="image/webp" />
             <img src="/assets/destination/image-moon.png" alt="moon" />
          </picture>
 
          <article className="space-y-6">
             {/*-- TabList --*/}
-            < div className="underline-tablist" role="tablist" >
+            <div className="underline-tablist" role="tablist" >
                <button role="tab" className="font-sans-cond text-fs-200 tracking-[2.36px] uppercase" aria-selected="true">Moon</button>
                <button role="tab" className="font-sans-cond text-fs-200 tracking-[2.36px] uppercase">Mars</button>
                <button role="tab" className="font-sans-cond text-fs-200 tracking-[2.36px] uppercase">Europa</button>
@@ -29,7 +31,7 @@ const Destination = () => {
             </div >
 
             {/*-- Sub heading --*/}
-            < h2 className="uppercase font-serif text-fs-700 text-clr-white" > Moon</h2 >
+            <h2 className="uppercase font-serif text-fs-700 text-clr-white" > Moon</h2 >
 
             {/*-- content --*/}
             <p className="max-w-para font-sans text-fs-400 leading-6 px-6">
@@ -38,7 +40,9 @@ const Destination = () => {
                by visiting the Luna 2 and Apollo 11 landing sites.
             </p>
 
-            < div className="space-y-8 border-t border-white/25" >
+            <div className="space-y-8 border-t border-white/25
+            md:flex md:justify-evenly md:space-y-0 md:pt-8
+            " >
                <header>
                   <h3 className="uppercase font-sans-cond text-fs-100 tracking-[2.36px]">Avg.distance</h3>
                   <p className="font-serif text-fs-600 py-3">384,400 km</p>
