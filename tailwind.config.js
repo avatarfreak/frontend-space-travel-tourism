@@ -52,7 +52,8 @@ module.exports = {
          },
          gridTemplateColumns: {
             "lg-home": "minmax(2rem, 10.3rem) repeat(2, 1fr) minmax(2rem, 10.3rem)",
-            "lg-dest": "minmax(2rem, 10.3rem) minmax(25rem, 1fr) minmax(30rem, 1fr) minmax(2rem, 10.3rem)"
+            "lg-dest": "minmax(2rem, 10.3rem) minmax(25rem, 1fr) minmax(30rem, 1fr) minmax(2rem, 10.3rem)",
+            "lg-crew": "minmax(2rem, 10.3rem) minmax(25rem, 1fr) minmax(30rem, 1fr) minmax(2rem, 10.3rem)"
          },
          margin: {
             "md-clamp": "clamp(6.25rem, 20vw, 6.625rem)",

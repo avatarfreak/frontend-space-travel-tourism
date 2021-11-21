@@ -28,25 +28,25 @@ const CrewPage: React.FC<ICrewProps> = ({ data }) => {
 
    return (
       <>
-         <main className="w-full text-center space-x-8  grid  justify-items-center md:mt-md-clamp">
+         <main className="w-full text-center space-x-8  grid  justify-items-center md:mt-md-clamp lg:grid-cols-lg-crew lg:justify-items-start">
             {/*-- heading --*/}
             <h1 className="uppercase font-sans-cond text-fs-900 tracking-[2.7px] text-clr-white mt-8
-            md:justify-self-start md:pl-8 
+            md:justify-self-start md:pl-8 lg:col-start-2 lg:col-span-2 row-start-1 
             ">
                <span className="font-bold text-white/50 mr-4">02</span>
                Meet your crew
             </h1>
 
             {/*-- picture --*/}
-            <picture className="w-3/5 block border-b border-white/50 self-end 
-            md:max-w-2/5 md:order-3
+            <picture className="max-w-3/5 block border-b border-white/50 self-end 
+            md:max-w-2/5 md:order-3 lg:col-start-3 lg:row-start-2 lg:row-span-2 lg:max-w-full
             ">
                <source srcSet={data.images.webp} type="image/webp" />
                <img src={data.images.png} alt={data.name} />
             </picture>
 
             {/*-- TabList --*/}
-            <div className="dot-tablist" role="tablist">
+            <div className="dot-tablist lg:col-start-2 lg:row-start-3 lg:mx-8" role="tablist">
                {
                   roles.map((role, idx) => (
                      <button
@@ -60,7 +60,7 @@ const CrewPage: React.FC<ICrewProps> = ({ data }) => {
             </div>
 
 
-            <article className="space-y-6 md:order-2 md:mt-4">
+            <article className="space-y-6 md:order-2 md:mt-4 lg:col-start-2 lg:text-left">
                {/*-- Sub Heading --*/}
                <header className="space-y-2">
                   <h2 className="uppercase font-serif text-fs-550 text-white/50">{data.role}</h2>
@@ -68,7 +68,7 @@ const CrewPage: React.FC<ICrewProps> = ({ data }) => {
                </header>
 
                {/*-- content --*/}
-               <p className="font-sans text-fs-400 leading-8 max-w-para px-6">{data.bio}</p>
+               <p className="font-sans text-fs-400 leading-8 max-w-para px-6 lg:px-0">{data.bio}</p>
 
             </article>
          </main>
