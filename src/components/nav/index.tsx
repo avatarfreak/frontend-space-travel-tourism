@@ -1,11 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
-
 
 const Navigation = () => {
    const [isOpen, setIsOpen] = useState<boolean>(false);
    const [isActive, setIsActive] = useState<boolean>(false);
 
+   // Router
+   const router = useRouter();
+   const pathname = router.asPath.replaceAll('/', '');
+   console.log(pathname)
+   // Nav Ref
    const navRef = useRef<HTMLUListElement | null>(null);
 
    useEffect(() => {
@@ -73,16 +78,36 @@ const Navigation = () => {
                lg:w-[830px]
                ">
                <li>
-                  <Link href="/"><a className="uppercase  md:border-b-4 md:border-white md:pb-9 "><span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">00</span>Home</a></Link>
+                  <Link href="/">
+                     <a className={`uppercase  ${pathname === '' ? "md:border-b-4" : "md:hover:border-b-4 md:hover:border-white/20"} md:pb-9 `}>
+                        <span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">00</span>
+                        Home
+                     </a>
+                  </Link>
                </li>
                <li>
-                  <Link href="/destination"><a className="uppercase  md:pb-9 md:hover:border-b-4 md:hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">01</span>destination</a></Link>
+                  <Link href="/destination">
+                     <a className={`uppercase  ${pathname === 'destination' ? "md:border-b-4" : "md:hover:border-b-4 md:hover:border-white/20"} md:pb-9 `}>
+                        <span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">01</span>
+                        destination
+                     </a>
+                  </Link>
                </li>
                <li>
-                  <Link href="/crew"><a className="uppercase md:pb-9 md:hover:border-b-4 md:hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">02</span>crew</a></Link>
+                  <Link href="/crew">
+                     <a className={`uppercase  ${pathname === 'crew' ? "md:border-b-4" : "md:hover:border-b-4 md:hover:border-white/20"} md:pb-9 `}>
+                        <span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">02</span>
+                        crew
+                     </a>
+                  </Link>
                </li>
                <li>
-                  <Link href="/technology"><a className="uppercase md:pb-9  md:hover:border-b-4 md:hover:border-white/20"><span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">03</span>technology</a></Link>
+                  <Link href="/technology">
+                     <a className={`uppercase  ${pathname === 'technology' ? "md:border-b-4" : "md:hover:border-b-4 md:hover:border-white/20"} md:pb-9 `}>
+                        <span aria-hidden="true" className="mr-3 font-bold md:hidden lg:inline-block">03</span>
+                        technology
+                     </a>
+                  </Link>
                </li>
             </ul>
          </nav>
