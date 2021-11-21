@@ -1,0 +1,20 @@
+@use "../../utilities/mixins" as *;
+@use "../../utilities/func" as *;
+
+.underline-tablist > [aria-selected="true"] {
+  border-bottom: 2px solid var(--clr-white);
+  padding-bottom: 0.5rem;
+  color: var(--clr-white);
+}
+
+.underline-tablist > * {
+  border: 0;
+  color: var(--clr-light);
+  background-color: transparent;
+  margin: 0 0.5rem;
+}
+
+.underline-tablist > *:not([aria-selected="true"]):hover {
+  border-bottom: 2px solid hsla(0, 0%, 100%, 0.4);
+  padding-bottom: 0.5rem;
+}
