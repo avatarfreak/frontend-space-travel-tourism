@@ -1,0 +1,20 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/func" as *;
+
+.crew {
+  @include backgroundImage("crew", "mobile");
+}
+
+@media (min-width: 48rem) {
+  .crew {
+    @include backgroundImage("crew", "tablet") {
+      background-position: center center;
+    }
+  }
+}
+
+@media (min-width: 64rem) {
+  .crew {
+    @include backgroundImage("crew", "desktop");
+  }
+}

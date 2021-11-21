@@ -1,0 +1,20 @@
+@use "../../utilities/func" as *;
+@use "../../utilities/mixins" as *;
+
+.dot-tablist > [aria-selected="true"] {
+  opacity: 100%;
+}
+
+.dot-tablist > * {
+  height: to_rem(15);
+  width: to_rem(15);
+  border-radius: 50%;
+  background: var(--clr-white);
+  opacity: 50%;
+  border: 0;
+  margin: 0 0.5rem;
+}
+
+.dot-tablist > *:not([aria-selected="true"]):hover {
+  opacity: 70%;
+}
