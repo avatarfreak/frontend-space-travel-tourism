@@ -4,7 +4,7 @@ import React from 'react'
 const useBackgroundImage = (bgImg: string) => {
    const [image, setImage] = React.useState<string>('home');
 
-   React.useEffect(() => {
+   React.useLayoutEffect(() => {
       // Remove all the classes
       document.body.className = '';
 
