@@ -1,0 +1,21 @@
+@use "../utilities/func" as *;
+@use "../utilities/mixins" as *;
+
+/* Background Image */
+.destination {
+  @include backgroundImage("destination", "mobile");
+}
+
+@include mq(48rem) {
+  .destination {
+    @include backgroundImage("destination", "tablet") {
+      background-position: center center;
+    }
+  }
+}
+
+@include mq(64rem) {
+  .destination {
+    @include backgroundImage("destination", "desktop");
+  }
+}
