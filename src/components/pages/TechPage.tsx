@@ -29,15 +29,19 @@ const TechPage: React.FC<TechIProps> = ({ data }) => {
    }
 
    return (
-      <main className="text-center space-y-8 w-full">
+      <main className="text-center  space-y-8 w-full
+      md:mt-md-clamp
+      ">
          {/*-- heading --*/}
-         <h1 className="uppercase font-sans-cond text-fs-900 tracking-[2.7px]">
+         <h1 className="uppercase font-sans-cond text-fs-900 tracking-[2.7px]
+         md:text-left md:my-10 md:mx-8
+         ">
             <span className="font-bold text-white/50 mr-2">03</span>
             Space launch 101
          </h1>
 
          {/*-- picture --*/}
-         <picture>
+         <picture className="flex justify-center">
             <source media="(min-width: 64rem)" srcSet={data.images.portrait} type="image/jpg" />
             <img src={data.images.landscape} alt={data.name} />
          </picture>
@@ -59,7 +63,7 @@ const TechPage: React.FC<TechIProps> = ({ data }) => {
          </div>
 
 
-         <article className="px-8 space-y-8">
+         <article className="px-8 space-y-8 w-full md:pb-16">
             {/*-- Sub Heading --*/}
             <header className="space-y-2">
                <h2 className="uppercase font-sans-cond text-550 tracking-[2.36px]">The terminology...</h2>
@@ -67,7 +71,7 @@ const TechPage: React.FC<TechIProps> = ({ data }) => {
             </header>
 
             {/*-- content --*/}
-            <p className="font-sans text-fs-400 leading-6 max-w-para">{data.description}</p>
+            <p className="font-sans text-fs-400 leading-6 max-w-para mx-auto ">{data.description}</p>
          </article>
 
       </main>)
