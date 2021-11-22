@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fcrew\u002F[crewId]","\u002Fdestination\u002F[destId]","\u002Ftechnology\u002F[techId]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
