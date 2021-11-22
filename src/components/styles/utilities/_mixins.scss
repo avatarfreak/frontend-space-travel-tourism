@@ -14,7 +14,7 @@
 }
 /* background Image */
 @mixin backgroundImage($page, $device) {
-  background-image: url("/assets/#{$page}/background-#{$page}-#{$device}.jpg");
+  background-image: url("/frontend-space-travel-tourism/assets/#{$page}/background-#{$page}-#{$device}.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   @content;
