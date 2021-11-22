@@ -1,0 +1,39 @@
+@use "../../utilities/mixins" as *;
+@use "../../utilities/func" as *;
+
+.num-tablist > [aria-selected="true"] {
+  background-color: var(--clr-white);
+  color: var(--clr-dark);
+}
+
+.num-tablist > * {
+  font-size: 1rem;
+  font-family: var(--ff-serif);
+  width: to_rem(40);
+  height: to_rem(40);
+  border: 1px solid;
+  border-color: var(--clr-white) / 0.5;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--clr-white);
+  margin: 0 0.5rem;
+  cursor: pointer;
+
+  /* Tablet layout */
+  @include mq(48rem) {
+    width: to_rem(60);
+    height: to_rem(60);
+    font-size: 2rem;
+  }
+
+  /* Desktop layout */
+  @include mq(64rem) {
+    width: to_rem(80);
+    height: to_rem(80);
+  }
+}
+
+.num-tablist > *:not([aria-selected="true"]):hover {
+  background-color: var(--clr-white);
+  color: var(--clr-dark);
+}
