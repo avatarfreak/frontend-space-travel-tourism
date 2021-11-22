@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import useBackgroundImage from 'components/hook/useBackgroundImage';
 
 const Navigation = () => {
    const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -9,7 +10,7 @@ const Navigation = () => {
    // Router
    const router = useRouter();
    const pathname = router.asPath.replaceAll('/', '');
-   console.log(pathname)
+   useBackgroundImage(pathname)
    // Nav Ref
    const navRef = useRef<HTMLUListElement | null>(null);
 
