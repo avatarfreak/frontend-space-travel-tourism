@@ -10,6 +10,7 @@ export interface TechIProps {
    data: techData;
 }
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const btnLists = ["launch vehicle", "spaceport", "space capsule"];
 
 const TechPage: React.FC<TechIProps> = ({ data }) => {
@@ -39,7 +40,7 @@ const TechPage: React.FC<TechIProps> = ({ data }) => {
          {/*-- picture --*/}
          <picture className="flex justify-center lg:px-0 lg:!m-0 lg:w-full lg:self-start lg:col-start-4 lg:col-span-2 lg:row-start-2 lg:row-span-2 lg:justify-end lg:rounded-tl-sm lg:rounded-bl-sm lg:overflow-hidden">
             <source media="(min-width: 64rem)" srcSet={data.images.portrait} type="image/jpg" />
-            <img src={data.images.landscape} alt={data.name} width={data.images.width} height={data.images.height} loading="lazy" />
+            <img src={`${prefix} ${data.images.landscape}`} alt={data.name} width={data.images.width} height={data.images.height} loading="lazy" />
          </picture>
 
          {/*-- TabList --*/}

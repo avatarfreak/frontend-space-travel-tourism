@@ -7,6 +7,7 @@ class MyDocument extends Document {
       return initialProps;
    }
    render() {
+      const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
       return (
          <Html lang="en">
             <Head>
@@ -17,6 +18,7 @@ class MyDocument extends Document {
                   href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
                   rel="stylesheet"
                />
+               <link rel="icon" type="image/png" sizes="32x32" href={`${prefix}/assets/favicon-32x32.png`} />
             </Head>
             <body>
                <Main />

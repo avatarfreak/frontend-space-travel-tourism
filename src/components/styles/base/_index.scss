@@ -50,6 +50,10 @@
     --fs-100: 14px;
   }
 }
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
 
 :focus-visible {
   outline: 2px dashed red;
