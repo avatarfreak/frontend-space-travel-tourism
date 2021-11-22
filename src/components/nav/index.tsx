@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import useBackgroundImage from 'components/hook/useBackgroundImage';
 
 const Navigation = () => {
    const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -9,7 +8,7 @@ const Navigation = () => {
 
    // Router
    const router = useRouter();
-   const pathname = router.asPath.replaceAll('/', '');
+   const pathname = router.asPath.split('/').slice(1, 2).join("");
 
    // Nav Ref
    const navRef = useRef<HTMLUListElement | null>(null);
@@ -41,7 +40,8 @@ const Navigation = () => {
          {/*--- Logo --- */}
          <Link href="/">
             <a>
-               <img src="/assets/shared/logo.svg" className="mt-7 lg:min-h-[3rem] lg:min-w-[3rem] lg:mr-16 lg:mt-0" alt="logo" />
+               <img src="/assets/shared/logo.svg" aria-hidden="true" width="48" height="48" className="mt-7 lg:min-h-[3rem] lg:min-w-[3rem] lg:mr-16 lg:mt-0" alt="logo" />
+               <span className="sr-only">Logo</span>
             </a>
          </Link>
 
@@ -62,7 +62,7 @@ const Navigation = () => {
             className={`
              fixed right-0 top-0 min-h-screen bg-white/10 backdrop-blur-xl w-3/4 transform transition duration-700 ease-in-out z-10
              ${!isOpen ? "translate-x-full" : "translate-x-0"}
-             md:translate-x-0 md:tracking-[2.36px] md:text-sm md:min-h-[6rem]
+            md:relative md:translate-x-0 md:tracking-[2.36px] md:text-sm md:min-h-[6rem]
 
              lg:font-sans-cond
              lg:translate-x-0

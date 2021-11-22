@@ -2,6 +2,9 @@ import useBackgroundImage from "components/hook/useBackgroundImage";
 import Head from "next/head";
 
 const Home = () => {
+   // setting Background image
+   useBackgroundImage('home')
+
    return (
       <>
          <Head>
@@ -26,10 +29,9 @@ const Home = () => {
 
             {/*--- image ---*/}
             <div className="pt-20 pb-12 lg:col-start-3 col-span-1">
-               <a href="#" className="btn-explore uppercase w-40 h-40 rounded-full bg-white inline-flex items-center justify-center text-fs-300 font-serif text-clr-dark tracking-[1.25px]
-                md:w-60 md:h-60 lg:w-64 lg:h-64 
-
-               ">Explore</a>
+               <a href="#" className="btn-explore uppercase w-40 h-40 rounded-full bg-white inline-flex items-center justify-center text-fs-300 font-serif text-clr-dark tracking-[1.25px] md:w-60 md:h-60 lg:w-64 lg:h-64">
+                  Explore
+               </a>
             </div>
          </main>
       </>
