@@ -3,9 +3,6 @@ import { slugify } from "components/utilities/slugify";
 import { GetStaticPaths, GetStaticProps } from "next";
 import dataJSON from "../../data.json";
 
-interface Props {
-
-}
 
 const Crew = ({ data }) => {
    return <CrewPage data={data} />
