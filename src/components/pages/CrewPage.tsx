@@ -12,9 +12,6 @@ export interface ICrewProps {
 const roles = ["commander", "mission-specialist", "pilot", "flight-engineer"];
 
 const CrewPage: React.FC<ICrewProps> = ({ data }) => {
-   // Setting Background Image
-   useBackgroundImage('crew')
-
    // Router
    const router = useRouter();
    const { crewId } = router.query;

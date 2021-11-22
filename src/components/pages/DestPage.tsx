@@ -13,9 +13,6 @@ export interface DestIProps {
 const stars = ['moon', 'mars', 'europa', 'titan'];
 
 const DestPage: React.FC<DestIProps> = ({ data }) => {
-   // Setting BackgroundImage
-   useBackgroundImage('destination')
-
    //Getting pathname
    const router = useRouter();
    const { destId } = router.query;

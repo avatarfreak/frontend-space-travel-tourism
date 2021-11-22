@@ -2,9 +2,6 @@ import useBackgroundImage from "components/hook/useBackgroundImage";
 import Head from "next/head";
 
 const Home = () => {
-   // Setting background image
-   useBackgroundImage('home')
-
    return (
       <>
          <Head>
