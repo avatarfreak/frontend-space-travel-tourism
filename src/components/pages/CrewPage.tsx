@@ -45,7 +45,7 @@ const CrewPage: React.FC<ICrewProps> = ({ data }) => {
             {/*-- picture --*/}
             <picture className="max-w-3/5  mt-4 block border-b border-white/50 self-end md:max-w-2/5 md:order-3 lg:col-start-3 lg:mt-0 lg:row-start-2 lg:row-span-2 lg:max-w-full
             ">
-               <source srcSet={data.images.webp} type="image/webp" />
+               <source srcSet={`${prefix}${data.images.webp}`} type="image/webp" />
                <img src={`${prefix}${data.images.png}`} alt={data.name} width={data.images.width} height={data.images.height} loading="lazy" />
             </picture>
 
