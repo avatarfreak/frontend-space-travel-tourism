@@ -10,7 +10,7 @@ const Navigation = () => {
    // Router
    const router = useRouter();
    const pathname = router.asPath.replaceAll('/', '');
-   useBackgroundImage(pathname)
+
    // Nav Ref
    const navRef = useRef<HTMLUListElement | null>(null);
 
