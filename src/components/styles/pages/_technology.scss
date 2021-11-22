@@ -1,0 +1,21 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/func" as *;
+
+/* Background Image */
+.technology {
+  @include backgroundImage("technology", "mobile");
+}
+
+@include mq(48rem) {
+  .technology {
+    @include backgroundImage("technology", "tablet") {
+      background-position: center center;
+    }
+  }
+}
+
+@include mq(64rem) {
+  .technology {
+    @include backgroundImage("technology", "desktop");
+  }
+}
