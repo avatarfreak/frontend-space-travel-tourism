@@ -42,7 +42,7 @@ const Navigation = () => {
          {/*--- Logo --- */}
          <Link href="/">
             <a>
-               <img src={`${prefix}/assets/shared/logo.svg`} aria-hidden="true" width="48" height="48" className="mt-7 lg:min-h-[3rem] lg:min-w-[3rem] lg:mr-16 lg:mt-0" alt="logo" />
+               <img src={`${prefix}/assets/shared/logo.svg`} aria-hidden="true" width="48" height="48" className="lg:min-h-[3rem] lg:min-w-[3rem] lg:mr-16 lg:mt-0" alt="logo" />
                <span className="sr-only">Logo</span>
             </a>
          </Link>
