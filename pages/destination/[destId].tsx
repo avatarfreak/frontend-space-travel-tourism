@@ -27,6 +27,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
    const { destId } = context.params;
 
    const destination = dataJSON.destinations.find(destination => destination.name.toString().toLowerCase() === destId);
+   if (!destination) return { notFound: true }
+
    return {
       props: {
          data: destination

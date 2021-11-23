@@ -5,6 +5,7 @@ import dataJSON from "../../data.json";
 
 
 const Crew = ({ data }) => {
+
    return <CrewPage data={data} />
 }
 
@@ -17,13 +18,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
          crewId: slugify(crew.role.toString().toLowerCase())
       }
    }));
+
+
    return { paths, fallback: false }
 }
+
 
 // Static Props
 export const getStaticProps: GetStaticProps = async (context) => {
    const { crewId } = context.params;
    const crew = dataJSON.crew.find(crew => slugify(crew.role.toString().toLowerCase()) === crewId);
+
+   if (!crew) return { notFound: true }
+
    return {
       props: {
          data: crew

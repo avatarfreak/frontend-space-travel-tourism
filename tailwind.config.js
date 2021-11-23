@@ -1,3 +1,4 @@
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 module.exports = {
    mode: 'jit',
    purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}', './src/**/*.{js,ts,jsx,tsx}'],
@@ -28,24 +29,24 @@ module.exports = {
             "clr-white": "var(--clr-white)",
          },
          backgroundImage: {
-            "home-mobile": "url(/assets/home/background-home-mobile.jpg)",
-            "home-tablet": "url(/assets/home/background-home-tablet.jpg)",
-            "home-desktop": "url(/assets/home/background-home-desktop.jpg)",
+            "home-mobile": `url(${prefix}/assets/home/background-home-mobile.jpg)`,
+            "home-tablet": `url(${prefix}/assets/home/background-home-tablet.jpg)`,
+            "home-desktop": `url(${prefix}/assets/home/background-home-desktop.jpg)`,
 
-            "technology-mobile": "url(/assets/technology/background-technology-mobile.jpg)",
-            "technology-tablet": "url(/assets/technology/background-technology-tablet.jpg)",
-            "technology-desktop": "url(/assets/technology/background-technology-desktop.jpg)",
+            "technology-mobile": `url(${prefix}/assets/technology/background-technology-mobile.jpg)`,
+            "technology-tablet": `url(${prefix}/assets/technology/background-technology-tablet.jpg)`,
+            "technology-desktop": `url(${prefix}/assets/technology/background-technology-desktop.jpg)`,
 
-            "destination-mobile": "url(/assets/destination/background-destination-mobile.jpg)",
-            "destination-tablet": "url(/assets/destination/background-destination-tablet.jpg)",
-            "destination-desktop": "url(/assets/destination/background-destination-desktop.jpg)",
+            "destination-mobile": `url(${prefix}/assets/destination/background-destination-mobile.jpg)`,
+            "destination-tablet": `url(${prefix}/assets/destination/background-destination-tablet.jpg)`,
+            "destination-desktop": `url(${prefix}/assets/destination/background-destination-desktop.jpg)`,
 
-            "crew-mobile": "url(/assets/crew/background-crew-mobile.jpg)",
-            "crew-tablet": "url(/assets/crew/background-crew-tablet.jpg)",
-            "crew-desktop": "url(/assets/crew/background-crew-desktop.jpg)",
+            "crew-mobile": `url(${prefix}/assets/crew/background-crew-mobile.jpg)`,
+            "crew-tablet": `url(${prefix}/assets/crew/background-crew-tablet.jpg)`,
+            "crew-desktop": `url(${prefix}/assets/crew/background-crew-desktop.jpg)`,
 
-            "menu-open": "url(/assets/shared/icon-hamburger.svg)",
-            "menu-close": "url(/assets/shared/icon-close.svg)",
+            "menu-open": `url(${prefix}/assets/shared/icon-hamburger.svg)`,
+            "menu-close": `url(${prefix}/assets/shared/icon-close.svg)`,
          },
          gridTemplateRows: {
             "base": "min-content 1fr",

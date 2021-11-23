@@ -23,6 +23,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
    const { techId } = context.params;
    const technology = dataJSON.technology.find(technology => technology.name.toLowerCase().replace(/\s/g, '-') === techId);
+
+   if (!technology) return { notFound: true }
+
    return {
       props: {
          data: technology
