@@ -1,3 +1,3 @@
 export function slugify(path: string) {
-   return path.replaceAll(' ', '-');
+   return path.replace(/\s/g, '-');
 }
