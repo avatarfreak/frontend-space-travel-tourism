@@ -48,7 +48,7 @@ const DestPage: React.FC<DestIProps> = ({ data }) => {
             {/*-- picture --*/}
             <picture className="max-w-1/2 md:max-w-2/5 lg:max-w-full lg:col-start-2 lg:row-start-2 lg:row-span-3">
                <source srcSet={`${prefix}${data.images.webp}`} type="image/webp" />
-               <img src={`${prefix}${data.images.png}`} alt={data.name} width={data.images.width} height={data.images.height} loading="lazy" />
+               <img src={`${prefix}${data.images.png}`} alt={data.name} width={data.images.width} height={data.images.height} />
             </picture>
 
             <article className="space-y-6 lg:col-start-3 lg:col-span-2">

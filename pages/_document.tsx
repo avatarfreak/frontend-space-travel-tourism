@@ -11,7 +11,6 @@ class MyDocument extends Document {
       return (
          <Html lang="en">
             <Head>
-               <meta name="description" content="Space travel accepted by avatarfreak" />
                <link rel="preconnect" href="https://fonts.googleapis.com" />
                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                <link
